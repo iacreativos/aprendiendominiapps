@@ -223,16 +223,22 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
       <h2 class="font-display font-bold text-base">Haz la mía</h2>
       <div class="hairline flex-1"></div>
     </div>
-    <p class="text-xs" style="color:var(--ink-600)">Cuéntanos sobre tu negocio y te escribimos por WhatsApp con tu cotización.</p>
-    <div class="space-y-3 mt-4">
-      <input id="cot-nombre" class="field" placeholder="Nombre">
-      <input id="cot-empresa" class="field" placeholder="Empresa">
-      <input id="cot-ciudad" class="field" placeholder="Ciudad">
-      <input id="cot-whatsapp" class="field" placeholder="WhatsApp" type="tel">
-      <input id="cot-tipo" class="field" placeholder="Tipo de negocio">
-      <textarea id="cot-desc" class="field" rows="3" placeholder="Descripción / ¿qué necesitas?"></textarea>
+
+    <div class="rounded-2xl p-4 mb-4" style="background:rgba(200,95,255,.08);border:1.5px solid rgba(156,73,215,.4)">
+      <p class="text-xs leading-relaxed" style="color:var(--ink-600)">
+        <i class="fa-solid fa-phone-volume mr-1" style="color:#C85FFF"></i>
+        Para darte una cotización justa (y no cotizar a ciegas), primero agendamos una <b style="color:#C85FFF">llamada corta de 20-30 min</b>. Ahí conocemos tu negocio, tu necesidad, y te planteamos la propuesta de desarrollo.
+      </p>
     </div>
-    <button onclick="submitCotizacion()" class="w-full mt-5 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2" style="background:var(--wa-green)"><i class="fa-brands fa-whatsapp"></i> Solicitar cotización</button>
+
+    <p class="text-xs" style="color:var(--ink-600)">Cuéntanos un poco antes de agendar:</p>
+    <div class="space-y-3 mt-3">
+      <input id="cot-nombre" class="field" placeholder="Nombre del cliente">
+      <input id="cot-tipo" class="field" placeholder="Tipo de negocio">
+      <textarea id="cot-desc" class="field" rows="5" placeholder="Descripción de tu negocio y qué necesitas"></textarea>
+    </div>
+    <button onclick="scheduleCall()" class="w-full mt-5 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2" style="background:var(--wa-green)"><i class="fa-solid fa-calendar-check"></i> Agendar llamada</button>
+    <p class="text-[10px] text-center mt-3" style="color:var(--ink-400)">Se abrirá nuestra agenda para que elijas fecha y hora.</p>
   </section>
 </div>
 
@@ -293,7 +299,10 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
 <script>
 const BIZ = {
   name: "Aprendiendo & Emprendiendo",
-  whatsapp: "573000000000"
+  whatsapp: "573000000000",
+  // TODO: reemplaza por tu link real de Cal.com (ej. https://cal.com/tu-usuario/llamada-cotizacion)
+  // Recuerda activar "Requires Confirmation" en ese evento para que las citas queden pendientes hasta que las apruebes.
+  calUrl: "https://cal.com/tu-usuario/llamada-cotizacion"
 };
 
 const PAYMENT_METHODS = [
@@ -327,7 +336,7 @@ const DEMOS = [
   {id:'burger', name:'Burger Master', cat:'Restaurante', icon:'fa-burger', color:'#e11d48', url:'#'},
   {id:'barber', name:'Barber Pro', cat:'Barbería', icon:'fa-scissors', url:'#'},
   {id:'dental', name:'Vitalis Dental', cat:'Odontología', icon:'fa-tooth', url:'#'},
-  {id:'nails', name:'Nail Studio', cat:'Manicure', icon:'fa-hand-sparkles', url:'https://iacreativos.github.io/miniappswhatsapp-nailstudio/'},
+  {id:'nails', name:'Nail Studio', cat:'Manicure', icon:'fa-hand-sparkles', url:'#'},
 ];
 
 const CASOS = [
@@ -540,33 +549,21 @@ Adjunto el comprobante de pago para confirmar mi compra.`;
   closeModal('modal-payment');
 }
 
-function submitCotizacion(){
+function scheduleCall(){
   const nombre = document.getElementById('cot-nombre').value.trim();
-  const empresa = document.getElementById('cot-empresa').value.trim();
-  const ciudad = document.getElementById('cot-ciudad').value.trim();
-  const wa = document.getElementById('cot-whatsapp').value.trim();
   const tipo = document.getElementById('cot-tipo').value.trim();
   const desc = document.getElementById('cot-desc').value.trim();
 
-  if(!nombre || !wa){
-    alert('Por favor completa al menos tu nombre y WhatsApp.');
+  if(!nombre || !tipo || !desc){
+    alert('Por favor completa nombre, tipo de negocio y descripción antes de agendar.');
     return;
   }
 
-  const msg =
-`Hola. Vi la Mini App.
-Quiero cotizar una Mini App.
+  const notas = `Tipo de negocio: ${tipo}\nNecesidad: ${desc}`;
+  const url = `${BIZ.calUrl}?name=${encodeURIComponent(nombre)}&notes=${encodeURIComponent(notas)}`;
+  window.open(url, '_blank');
 
-*Nombre:* ${nombre}
-*Empresa:* ${empresa || '-'}
-*Ciudad:* ${ciudad || '-'}
-*WhatsApp:* ${wa}
-*Tipo de negocio:* ${tipo || '-'}
-*Descripción:* ${desc || '-'}`;
-
-  window.open(`https://wa.me/${BIZ.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
-
-  ['cot-nombre','cot-empresa','cot-ciudad','cot-whatsapp','cot-tipo','cot-desc'].forEach(id => document.getElementById(id).value = '');
+  ['cot-nombre','cot-tipo','cot-desc'].forEach(id => document.getElementById(id).value = '');
 }
 
 renderCursos();
