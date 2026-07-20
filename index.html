@@ -82,7 +82,13 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
         <span class="mt-1.5 px-2.5 py-1 rounded-full text-[9.5px] font-bold gold-grad" style="color:#1b1305">Tu crecimiento, nuestra misión</span>
       </div>
     </div>
-    <button onclick="openWhatsApp('Hola, quiero más información sobre las Mini Apps.')" class="w-12 h-12 flex items-center justify-center rounded-full border-2 flex-shrink-0 btn-press" style="border-color:var(--gold-500);color:var(--gold-400);background:rgba(227,169,53,.08)" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-xl"></i></button>
+    <div class="flex flex-col items-center gap-1.5 flex-shrink-0">
+      <button onclick="openWhatsApp('Hola, quiero más información sobre las Mini Apps.')" class="w-12 h-12 flex items-center justify-center rounded-full border-2 btn-press" style="border-color:var(--gold-500);color:var(--gold-400);background:rgba(227,169,53,.08)" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-xl"></i></button>
+      <div class="rounded-lg px-2 py-1 text-center panel-2">
+        <p class="text-[11px] font-bold leading-tight"><i class="fa-solid fa-star text-[9px]" style="color:var(--gold-400)"></i> <span id="rating-value" style="color:var(--gold-400)">4.7</span></p>
+        <p id="rating-count" class="text-[8px] leading-tight" style="color:var(--ink-400)">3 reseñas</p>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -123,7 +129,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
 
     <div class="text-center">
       <h1 class="font-display font-extrabold text-[28px] leading-[1.15] tracking-tight">Transforma tu negocio<br>con <span class="gold-text text-glow">Mini Apps profesionales</span></h1>
-      <p class="text-sm mt-3" style="color:var(--ink-600)">Aprende a crearlas o deja que nosotros las hagamos por ti.</p>
+      <p class="text-sm mt-3" style="color:var(--ink-600)">Muestra una imagen más profesional a tus clientes.</p>
       <div class="panel rounded-2xl p-3.5 mt-5 flex items-center gap-3 text-left" style="border-color:rgba(227,169,53,.3)">
         <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 gold-glow" style="background:rgba(227,169,53,.14)"><i class="fa-solid fa-shield-halved" style="color:var(--gold-400)"></i></div>
         <div>
@@ -132,9 +138,6 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
           <p class="text-[10px]" style="color:var(--ink-400)">Tecnología que impulsa negocios.</p>
         </div>
       </div>
-      <button onclick="scrollToAnchor('caminos')" class="btn-press w-full mt-5 py-4 rounded-2xl font-extrabold text-sm gold-grad gold-glow" style="color:#1b1305;letter-spacing:.01em">
-        Comenzar <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
-      </button>
     </div>
   </section>
 
@@ -162,7 +165,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
 
       <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:linear-gradient(180deg,#351541,#1F1027);border:1.5px solid #9C49D7;box-shadow:0 0 18px rgba(156,73,215,.25)">
         <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(200,95,255,.18)"><i class="fa-solid fa-rocket text-base" style="color:#C85FFF"></i></div>
-        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#C85FFF">Hazla por mí</p>
+        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#C85FFF">Cotizar</p>
         <p class="text-[8.5px] leading-snug flex-1" style="color:var(--ink-600)">Nuestro equipo la crea por ti.</p>
         <button onclick="switchTab('hazlamia')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] text-white flex items-center justify-center gap-1" style="background:#7C2CB8">COTIZAR <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
       </div>
@@ -176,20 +179,9 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
     </div>
   </div>
 
-  <section id="casos-anchor" class="px-5 pb-8">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="hairline flex-1"></div>
-      <h2 class="font-display font-bold text-base">Casos de éxito</h2>
-      <div class="hairline flex-1"></div>
-    </div>
-    <div id="casos-list" class="space-y-3"></div>
-    <p class="text-[10px] text-center mt-3" style="color:var(--ink-400)">* Reemplaza estos testimonios de ejemplo por los de tus propios clientes.</p>
-  </section>
-
   <div class="px-5">
-    <button onclick="openWhatsApp('Hola, quiero comenzar mi Mini App.')" class="btn-press w-full py-4 rounded-2xl font-extrabold text-sm text-white flex items-center justify-center gap-2" style="background:linear-gradient(90deg,#10A93B,#28D653);box-shadow:0 0 35px rgba(24,194,71,.45)">
-      <i class="fa-brands fa-whatsapp text-lg"></i> Comienza ahora tu Mini App
-    </button>
+    <p class="text-center text-sm font-semibold leading-snug gold-text">Mientras lo piensas, tu competencia ya está vendiendo más por WhatsApp.</p>
+    <p class="text-center text-sm font-semibold leading-snug mt-3" style="color:var(--ink-600)">Aprende a crear la tuya o déjanos hacerla por ti.</p>
     <p class="text-center text-[10px] mt-4" style="color:var(--ink-400)">© Aprendiendo &amp; Emprendiendo — Tecnología que impulsa negocios.</p>
   </div>
 </div>
@@ -202,6 +194,30 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
       <div class="hairline flex-1"></div>
     </div>
     <div id="cursos-list" class="space-y-4"></div>
+
+    <div class="rounded-2xl mt-4 overflow-hidden panel">
+      <div class="p-4">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(200,95,255,.15)"><i class="fa-solid fa-wand-magic-sparkles" style="color:#C85FFF"></i></div>
+          <div class="min-w-0">
+            <p class="font-display font-bold text-sm truncate" style="color:var(--ink-900)">¿Prefieres que la hagamos por ti?</p>
+            <p class="text-xs mt-0.5" style="color:var(--ink-600)">Te cotizamos una Mini App a la medida de tu negocio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button onclick="toggleAcc(this)" class="w-full flex items-center justify-between px-4 py-3 hairline border-t" style="border-color:var(--border)">
+          <span class="text-xs font-semibold" style="color:var(--ink-600)">Ver contenido</span>
+          <i class="fa-solid fa-plus acc-plus text-xs" style="color:#C85FFF"></i>
+        </button>
+        <div class="acc-body px-4">
+          <p class="text-xs pb-3" style="color:var(--ink-600)">Para darte una cotización justa, primero agendamos una <b style="color:var(--ink-900)">llamada de 20 a 30 minutos</b>. Ahí conocemos las necesidades de tu empresa y te contamos cómo podemos ayudarte a resolverlas con tu propia Mini App.</p>
+        </div>
+      </div>
+      <div class="p-4 pt-0">
+        <button onclick="switchTab('hazlamia')" class="btn-press w-full py-3 rounded-xl font-bold text-sm text-white" style="background:#7C2CB8">Cotizar La App Para Mi Negocio</button>
+      </div>
+    </div>
   </section>
 </div>
 
@@ -214,6 +230,17 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
     </div>
     <div id="demos-grid" class="grid grid-cols-2 gap-3"></div>
   </section>
+
+  <section id="casos-anchor" class="px-5 pb-8 pt-8">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="hairline flex-1"></div>
+      <h2 class="font-display font-bold text-base">Casos de éxito</h2>
+      <div class="hairline flex-1"></div>
+    </div>
+    <div id="casos-list" class="space-y-3"></div>
+
+    <button onclick="openTestiModal()" class="btn-press w-full mt-4 py-3 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 panel-2" style="color:var(--gold-400)"><i class="fa-solid fa-star"></i> ¿Ya tienes tu Mini App? Comentar</button>
+  </section>
 </div>
 
 <div id="page-hazlamia" class="page-content hide">
@@ -224,21 +251,59 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
       <div class="hairline flex-1"></div>
     </div>
 
-    <div class="rounded-2xl p-4 mb-4" style="background:rgba(200,95,255,.08);border:1.5px solid rgba(156,73,215,.4)">
-      <p class="text-xs leading-relaxed" style="color:var(--ink-600)">
-        <i class="fa-solid fa-phone-volume mr-1" style="color:#C85FFF"></i>
-        Para darte una cotización justa (y no cotizar a ciegas), primero agendamos una <b style="color:#C85FFF">llamada corta de 20-30 min</b>. Ahí conocemos tu negocio, tu necesidad, y te planteamos la propuesta de desarrollo.
-      </p>
+    <!-- Paso 1: formulario -->
+    <div id="hazla-step-form">
+      <div class="rounded-2xl p-4 mb-4" style="background:rgba(200,95,255,.08);border:1.5px solid rgba(156,73,215,.4)">
+        <p class="text-xs leading-relaxed" style="color:var(--ink-600)">
+          <i class="fa-solid fa-phone-volume mr-1" style="color:#C85FFF"></i>
+          Para darte una cotización justa (y no cotizar a ciegas), primero agendamos una <b style="color:#C85FFF">llamada corta de 20-30 min</b>. Ahí conocemos tu negocio, tu necesidad, y te planteamos la propuesta de desarrollo.
+        </p>
+      </div>
+
+      <p class="text-xs" style="color:var(--ink-600)">Cuéntanos un poco antes de agendar:</p>
+      <div class="space-y-3 mt-3">
+        <input id="cot-nombre" class="field" placeholder="Nombre del cliente">
+        <input id="cot-tipo" class="field" placeholder="Tipo de negocio">
+        <textarea id="cot-desc" class="field" rows="5" placeholder="Descripción de tu negocio y qué necesitas"></textarea>
+      </div>
+      <button onclick="startScheduling()" class="btn-press w-full mt-5 py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2" style="background:var(--gold-400);color:#1b1305"><i class="fa-solid fa-calendar-check"></i> Agendar Llamada</button>
     </div>
 
-    <p class="text-xs" style="color:var(--ink-600)">Cuéntanos un poco antes de agendar:</p>
-    <div class="space-y-3 mt-3">
-      <input id="cot-nombre" class="field" placeholder="Nombre del cliente">
-      <input id="cot-tipo" class="field" placeholder="Tipo de negocio">
-      <textarea id="cot-desc" class="field" rows="5" placeholder="Descripción de tu negocio y qué necesitas"></textarea>
+    <!-- Paso 2: elegir día -->
+    <div id="hazla-step-calendar" class="hide">
+      <button onclick="backToForm()" class="text-xs font-semibold flex items-center gap-1 mb-4" style="color:var(--gold-400)"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+      <p class="font-display font-bold text-sm mb-3">Elige un día</p>
+      <div class="rounded-2xl p-4 panel">
+        <div class="flex items-center justify-between mb-3">
+          <button onclick="calMonth(-1)" id="cal-prev" class="w-8 h-8 rounded-full flex items-center justify-center" style="color:var(--ink-400)"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+          <p id="cal-label" class="font-display font-bold text-sm"></p>
+          <button onclick="calMonth(1)" class="w-8 h-8 rounded-full flex items-center justify-center" style="color:var(--gold-400)"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+        </div>
+        <div class="grid grid-cols-7 gap-1 mb-1 text-center text-[10px]" style="color:var(--ink-400)">
+          <span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+        </div>
+        <div id="cal-grid" class="grid grid-cols-7 gap-1.5"></div>
+        <p class="text-[10px] text-center mt-3" style="color:var(--ink-400)">Solo se muestran los días con horarios disponibles.</p>
+      </div>
     </div>
-    <button onclick="scheduleCall()" class="w-full mt-5 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2" style="background:var(--wa-green)"><i class="fa-solid fa-calendar-check"></i> Agendar llamada</button>
-    <p class="text-[10px] text-center mt-3" style="color:var(--ink-400)">Se abrirá nuestra agenda para que elijas fecha y hora.</p>
+
+    <!-- Paso 3: elegir hora -->
+    <div id="hazla-step-time" class="hide">
+      <button onclick="backToCalendar()" class="text-xs font-semibold flex items-center gap-1 mb-4" style="color:var(--gold-400)"><i class="fa-solid fa-arrow-left"></i> Atrás</button>
+      <p class="font-display font-bold text-sm">Elige una hora</p>
+      <p id="time-label" class="text-xs mt-1" style="color:var(--ink-600)"></p>
+      <p class="text-[10px] mb-3" style="color:var(--ink-400)">Duración estimada: 30 min</p>
+      <div id="time-grid" class="grid grid-cols-3 gap-2"></div>
+    </div>
+
+    <!-- Paso 4: confirmación -->
+    <div id="hazla-step-done" class="hide text-center py-6">
+      <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(24,194,71,.15)"><i class="fa-solid fa-check text-2xl" style="color:#28D653"></i></div>
+      <p class="font-display font-bold text-base">¡Casi listo!</p>
+      <p id="done-summary" class="text-xs mt-2" style="color:var(--ink-600)"></p>
+      <button onclick="sendBookingWhatsApp()" class="w-full mt-5 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2" style="background:var(--wa-green)"><i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp</button>
+      <p class="text-[10px] text-center mt-3" style="color:var(--ink-400)">Te escribiremos para confirmar tu cita.</p>
+    </div>
   </section>
 </div>
 
@@ -282,6 +347,22 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
   </div>
 </div>
 
+<div id="modal-testimonio" class="modal-overlay">
+  <div class="modal-panel p-5">
+    <div class="w-10 h-1.5 rounded-full mx-auto mb-4" style="background:var(--border)"></div>
+    <h3 class="font-display font-bold text-base">Cuéntanos cómo te fue</h3>
+    <p class="text-xs mt-1" style="color:var(--ink-600)">Tu comentario nos llega por WhatsApp para revisarlo antes de publicarlo.</p>
+    <div class="flex justify-center gap-2 mt-4" id="testi-stars"></div>
+    <div class="space-y-2.5 mt-4">
+      <input id="testi-nombre" class="field" placeholder="Tu nombre">
+      <input id="testi-negocio" class="field" placeholder="Tu negocio">
+      <textarea id="testi-msg" class="field" rows="3" placeholder="Cuéntanos tu experiencia"></textarea>
+    </div>
+    <button onclick="submitTestimonio()" class="btn-press w-full mt-4 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2" style="background:var(--wa-green)"><i class="fa-brands fa-whatsapp"></i> Enviar mi comentario</button>
+    <button onclick="closeModal('modal-testimonio')" class="w-full mt-2 py-3 rounded-xl font-semibold text-sm border" style="border-color:var(--border);color:var(--ink-600)">Cancelar</button>
+  </div>
+</div>
+
 <button onclick="openWhatsApp('Hola, quiero más información sobre las Mini Apps.')" class="fixed z-40 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg active:scale-95 transition-transform" style="background:linear-gradient(135deg,#28D653,#10A93B);box-shadow:0 0 20px rgba(24,194,71,.4);bottom:86px;right:max(16px, calc(50vw - 199px))" aria-label="Escríbenos por WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </button>
@@ -291,7 +372,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
     <button class="tab-btn py-2.5 flex flex-col items-center gap-1 tab-active" data-tab="inicio" onclick="switchTab('inicio')"><i class="fa-solid fa-house nav-ic" style="font-size:22px"></i>Inicio</button>
     <button class="tab-btn py-2.5 flex flex-col items-center gap-1" data-tab="cursos" onclick="switchTab('cursos')"><i class="fa-solid fa-graduation-cap nav-ic" style="font-size:22px"></i>Cursos</button>
     <button class="tab-btn py-2.5 flex flex-col items-center gap-1" data-tab="demos" onclick="switchTab('demos')"><i class="fa-solid fa-rocket nav-ic" style="font-size:22px"></i>Demos</button>
-    <button class="tab-btn py-2.5 flex flex-col items-center gap-1" data-tab="hazlamia" onclick="switchTab('hazlamia')"><i class="fa-solid fa-wand-magic-sparkles nav-ic" style="font-size:22px"></i>Hazla</button>
+    <button class="tab-btn py-2.5 flex flex-col items-center gap-1" data-tab="hazlamia" onclick="switchTab('hazlamia')"><i class="fa-solid fa-wand-magic-sparkles nav-ic" style="font-size:22px"></i>Cotizar</button>
     <button class="tab-btn py-2.5 flex flex-col items-center gap-1" data-tab="preguntas" onclick="switchTab('preguntas')"><i class="fa-regular fa-circle-question nav-ic" style="font-size:22px"></i>Preguntas</button>
   </div>
 </nav>
@@ -299,10 +380,21 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
 <script>
 const BIZ = {
   name: "Aprendiendo & Emprendiendo",
-  whatsapp: "573000000000",
-  // TODO: reemplaza por tu link real de Cal.com (ej. https://cal.com/tu-usuario/llamada-cotizacion)
-  // Recuerda activar "Requires Confirmation" en ese evento para que las citas queden pendientes hasta que las apruebes.
-  calUrl: "https://cal.com/tu-usuario/llamada-cotizacion"
+  whatsapp: "573000000000"
+};
+
+// Configuración del calendario de "Haz la mía"
+const AGENDA = {
+  diasHabiles: [1,2,3,4,5,6], // 0=Domingo, 1=Lunes ... 6=Sábado. Por defecto: Lunes a Sábado.
+  horaInicio: 9,   // 9:00 AM
+  horaFin: 19,     // 7:00 PM (última hora agendable es 6:30 PM con turnos de 30 min)
+  duracionMin: 30, // minutos por turno
+  diasAdelante: 45, // hasta cuántos días a futuro se puede agendar
+  // Fechas puntuales bloqueadas (festivos, vacaciones, día ocupado). Formato: 'AAAA-MM-DD'
+  fechasBloqueadas: [
+    // '2026-08-07',
+    // '2026-12-25',
+  ]
 };
 
 const PAYMENT_METHODS = [
@@ -340,8 +432,10 @@ const DEMOS = [
 ];
 
 const CASOS = [
-  {name:'Camila R.', negocio:'Nail Studio', text:'Desde que tengo mi Mini App, los clientes agendan solos por WhatsApp. Se nota mucho más profesional.'},
-  {name:'Jorge M.', negocio:'Barbería', text:'Hice el curso avanzado y en una semana ya tenía mi propia Mini App funcionando.'},
+  {name:'Andrés P.', negocio:'Restaurante', text:'Mis clientes ven el menú y piden directo por WhatsApp. Se acabaron las llamadas confundidas.', stars:5},
+  {name:'Jorge M.', negocio:'Barbería', text:'Hice el curso avanzado y en una semana ya tenía mi propia Mini App funcionando.', stars:5},
+  {name:'Dra. Laura V.', negocio:'Odontología', text:'Mis pacientes agendan su cita ellos mismos y llegan mejor informados sobre nuestros servicios.', stars:5},
+  {name:'Camila R.', negocio:'Nail Studio', text:'Desde que tengo mi Mini App, los clientes agendan solos por WhatsApp. Se nota mucho más profesional.', stars:5},
 ];
 
 const FAQS = [
@@ -373,6 +467,10 @@ function switchTab(tab){
   document.querySelectorAll('.page-content').forEach(p=>p.classList.add('hide'));
   const page = document.getElementById('page-'+tab);
   if(page) page.classList.remove('hide');
+  if(tab === 'hazlamia'){
+    ['hazla-step-calendar','hazla-step-time','hazla-step-done'].forEach(id => document.getElementById(id).classList.add('hide'));
+    document.getElementById('hazla-step-form').classList.remove('hide');
+  }
   closeDrawer();
   window.scrollTo({top:0, behavior:'smooth'});
 }
@@ -383,7 +481,7 @@ function scrollToAnchor(id){
 }
 
 function goToCasos(){
-  switchTab('inicio');
+  switchTab('demos');
   setTimeout(()=>scrollToAnchor('casos-anchor'), 120);
 }
 
@@ -461,12 +559,19 @@ function renderCasos(){
   document.getElementById('casos-list').innerHTML = CASOS.map(t => `
     <div class="rounded-2xl panel p-4">
       <div class="flex items-center gap-1 mb-2" style="color:var(--gold-400)">
-        ${'<i class="fa-solid fa-star text-xs"></i>'.repeat(5)}
+        ${'<i class="fa-solid fa-star text-xs"></i>'.repeat(t.stars || 5)}${'<i class="fa-regular fa-star text-xs"></i>'.repeat(5-(t.stars || 5))}
       </div>
       <p class="text-xs" style="color:var(--ink-600)">"${t.text}"</p>
       <p class="text-xs font-semibold mt-2">${t.name} <span class="font-normal" style="color:var(--ink-400)">— ${t.negocio}</span></p>
     </div>
   `).join('');
+}
+
+function renderRatingBadge(){
+  if(!CASOS.length) return;
+  const avg = CASOS.reduce((sum,t)=>sum+(t.stars||5),0) / CASOS.length;
+  document.getElementById('rating-value').textContent = avg.toFixed(1);
+  document.getElementById('rating-count').textContent = `${CASOS.length} reseña${CASOS.length===1?'':'s'}`;
 }
 
 function renderFaq(){
@@ -549,29 +654,195 @@ Adjunto el comprobante de pago para confirmar mi compra.`;
   closeModal('modal-payment');
 }
 
-function scheduleCall(){
+/* ========================= Agenda propia (Haz la mía) ========================= */
+const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+let calViewYear, calViewMonth; // mes que se está mostrando en el calendario
+let bookingDate = null; // fecha elegida (Date, a medianoche local)
+let bookingTime = null; // hora elegida (string, ej "10:00 AM")
+
+function startScheduling(){
   const nombre = document.getElementById('cot-nombre').value.trim();
   const tipo = document.getElementById('cot-tipo').value.trim();
   const desc = document.getElementById('cot-desc').value.trim();
 
   if(!nombre || !tipo || !desc){
-    alert('Por favor completa nombre, tipo de negocio y descripción antes de agendar.');
+    alert('Por favor completa nombre, tipo de negocio y descripción antes de continuar.');
     return;
   }
 
-  const notas = `Tipo de negocio: ${tipo}\nNecesidad: ${desc}`;
-  const url = `${BIZ.calUrl}?name=${encodeURIComponent(nombre)}&notes=${encodeURIComponent(notas)}`;
-  window.open(url, '_blank');
+  const today = new Date();
+  calViewYear = today.getFullYear();
+  calViewMonth = today.getMonth();
+  renderCalendar();
 
-  ['cot-nombre','cot-tipo','cot-desc'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('hazla-step-form').classList.add('hide');
+  document.getElementById('hazla-step-calendar').classList.remove('hide');
+}
+
+function backToForm(){
+  document.getElementById('hazla-step-calendar').classList.add('hide');
+  document.getElementById('hazla-step-form').classList.remove('hide');
+}
+
+function backToCalendar(){
+  document.getElementById('hazla-step-time').classList.add('hide');
+  document.getElementById('hazla-step-calendar').classList.remove('hide');
+}
+
+function sameDay(a, b){
+  return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+}
+
+function calMonth(delta){
+  const today = new Date();
+  const minMonth = today.getFullYear()*12 + today.getMonth();
+  let target = calViewYear*12 + calViewMonth + delta;
+  if(target < minMonth) return; // no permitir ir a meses pasados
+  calViewMonth += delta;
+  if(calViewMonth < 0){ calViewMonth = 11; calViewYear--; }
+  if(calViewMonth > 11){ calViewMonth = 0; calViewYear++; }
+  renderCalendar();
+}
+
+function renderCalendar(){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const maxDate = new Date(today); maxDate.setDate(maxDate.getDate() + AGENDA.diasAdelante);
+
+  document.getElementById('cal-label').textContent = `${MESES[calViewMonth]} de ${calViewYear}`;
+
+  const minMonth = today.getFullYear()*12 + today.getMonth();
+  const isAtMin = (calViewYear*12 + calViewMonth) <= minMonth;
+  document.getElementById('cal-prev').style.opacity = isAtMin ? '.3' : '1';
+  document.getElementById('cal-prev').style.pointerEvents = isAtMin ? 'none' : 'auto';
+
+  const firstDay = new Date(calViewYear, calViewMonth, 1);
+  const startWeekday = firstDay.getDay();
+  const daysInMonth = new Date(calViewYear, calViewMonth+1, 0).getDate();
+
+  let html = '';
+  for(let i=0;i<startWeekday;i++) html += '<div></div>';
+
+  for(let d=1; d<=daysInMonth; d++){
+    const date = new Date(calViewYear, calViewMonth, d);
+    const isoDate = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+    const enabled = date >= today && date <= maxDate && AGENDA.diasHabiles.includes(date.getDay()) && !AGENDA.fechasBloqueadas.includes(isoDate);
+    if(enabled){
+      html += `<button onclick="pickDay(${calViewYear},${calViewMonth},${d})" class="aspect-square rounded-lg font-bold text-xs flex items-center justify-center btn-press" style="background:rgba(223,169,38,.15);color:var(--gold-400)">${d}</button>`;
+    } else {
+      html += `<div class="aspect-square rounded-lg flex items-center justify-center text-xs" style="color:var(--ink-400);opacity:.35">${d}</div>`;
+    }
+  }
+  document.getElementById('cal-grid').innerHTML = html;
+}
+
+function pickDay(y,m,d){
+  bookingDate = new Date(y,m,d);
+  const label = bookingDate.toLocaleDateString('es-CO', {weekday:'long', day:'numeric', month:'long'});
+  document.getElementById('time-label').textContent = label.charAt(0).toUpperCase() + label.slice(1);
+  renderTimeSlots();
+  document.getElementById('hazla-step-calendar').classList.add('hide');
+  document.getElementById('hazla-step-time').classList.remove('hide');
+}
+
+function renderTimeSlots(){
+  const now = new Date();
+  const isToday = sameDay(bookingDate, now);
+  let html = '';
+  for(let h=AGENDA.horaInicio; h<AGENDA.horaFin; h++){
+    for(let min=0; min<60; min+=AGENDA.duracionMin){
+      const slot = new Date(bookingDate);
+      slot.setHours(h, min, 0, 0);
+      if(isToday && slot <= now) continue; // no ofrecer horas ya pasadas si es hoy
+      const label = slot.toLocaleTimeString('es-CO', {hour:'numeric', minute:'2-digit', hour12:true}).toUpperCase();
+      html += `<button onclick="pickTime('${label}')" class="py-2.5 rounded-lg text-xs font-semibold btn-press" style="background:var(--panel-2);border:1px solid var(--border);color:var(--ink-900)">${label}</button>`;
+    }
+  }
+  document.getElementById('time-grid').innerHTML = html || `<p class="col-span-3 text-xs text-center py-6" style="color:var(--ink-400)">No quedan horarios disponibles este día.</p>`;
+}
+
+function pickTime(label){
+  bookingTime = label;
+  const fecha = bookingDate.toLocaleDateString('es-CO', {weekday:'long', day:'numeric', month:'long'});
+  document.getElementById('done-summary').innerHTML = `Tu llamada quedó propuesta para el<br><b style="color:var(--ink-900)">${fecha} a las ${bookingTime}</b>.<br>Confírmala por WhatsApp para dejarla en firme.`;
+  document.getElementById('hazla-step-time').classList.add('hide');
+  document.getElementById('hazla-step-done').classList.remove('hide');
+}
+
+function sendBookingWhatsApp(){
+  const nombre = document.getElementById('cot-nombre').value.trim();
+  const tipo = document.getElementById('cot-tipo').value.trim();
+  const desc = document.getElementById('cot-desc').value.trim();
+  const fecha = bookingDate.toLocaleDateString('es-CO', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+
+  const msg =
+`Hola ${BIZ.name}, quiero agendar una llamada de cotización.
+
+*Nombre:* ${nombre}
+*Tipo de negocio:* ${tipo}
+*Necesidad:* ${desc}
+
+*Fecha propuesta:* ${fecha}
+*Hora propuesta:* ${bookingTime}
+
+Quedo atento(a) a la confirmación.`;
+
+  window.open(`https://wa.me/${BIZ.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ========================= Testimonios (casos de éxito) ========================= */
+let testiRating = 0;
+
+function openTestiModal(){
+  testiRating = 0;
+  renderTestiStars();
+  openModal('modal-testimonio');
+}
+
+function renderTestiStars(){
+  const wrap = document.getElementById('testi-stars');
+  wrap.innerHTML = [1,2,3,4,5].map(n => `
+    <button onclick="pickTestiStar(${n})" class="btn-press" aria-label="${n} estrellas">
+      <i class="fa-solid fa-star text-2xl" style="color:${n<=testiRating ? 'var(--gold-400)' : 'var(--border)'}"></i>
+    </button>
+  `).join('');
+}
+
+function pickTestiStar(n){
+  testiRating = n;
+  renderTestiStars();
+}
+
+function submitTestimonio(){
+  const nombre = document.getElementById('testi-nombre').value.trim();
+  const negocio = document.getElementById('testi-negocio').value.trim();
+  const comentario = document.getElementById('testi-msg').value.trim();
+
+  if(!nombre || !negocio || !comentario || !testiRating){
+    alert('Por favor completa tu nombre, tu negocio, tu comentario y elige una calificación de estrellas.');
+    return;
+  }
+
+  const msg =
+`Hola ${BIZ.name}, quiero dejarles mi testimonio para la sección de Casos de éxito.
+
+*Nombre:* ${nombre}
+*Negocio:* ${negocio}
+*Calificación:* ${testiRating} de 5 estrellas
+*Comentario:* "${comentario}"`;
+
+  window.open(`https://wa.me/${BIZ.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+
+  ['testi-nombre','testi-negocio','testi-msg'].forEach(id => document.getElementById(id).value = '');
+  testiRating = 0;
+  closeModal('modal-testimonio');
 }
 
 renderCursos();
 renderDemos();
 renderCasos();
+renderRatingBadge();
 renderFaq();
 </script>
 </div>
 </body>
 </html>
-
