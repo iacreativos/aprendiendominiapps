@@ -9,8 +9,8 @@
 <meta property="og:title" content="Aprendiendo & Emprendiendo — Mini Apps profesionales">
 <meta property="og:description" content="Aprende a crear tu Mini App para WhatsApp o deja que la hagamos por ti.">
 <meta property="og:image" content="https://iacreativos.github.io/aprendiendominiapps/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://iacreativos.github.io/aprendiendominiapps/og-image.png">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -19,25 +19,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0806; --panel:#161209; --panel-2:#201a0f; --border:#3a2f1a;
-  --gold-400:#f3c15c; --gold-500:#e3a935; --gold-600:#c9962e;
-  --ink-900:#f8f4ea; --ink-600:#cbbfa2; --ink-400:#93876c;
-  --wa-green:#25D366; --wa-green-dark:#1ea952;
-  --teal:#16a08a; --purple:#8b5cf6;
+  --bg:#070706; --panel:#111111; --panel-2:#111111; --border:rgba(255,255,255,.08);
+  --gold-400:#DFA926; --gold-500:#DFA926; --gold-600:#9C6D0A; --gold-light:#F6D358; --icon-gold:#F4C63D; --glow:#FFCF47;
+  --ink-900:#F2F2F2; --ink-600:#B6B6B6; --ink-400:#7d7d7d;
+  --wa-green:#28D653; --wa-green-dark:#10A93B;
+  --teal:#06B6C7; --teal-dark:#065E63; --purple:#7C2CB8; --purple-dark:#4E1E73;
+  --radius:22px;
 }
 *{box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink-900)}
 h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
 .app-shell{max-width:430px;margin:0 auto;background:var(--bg);min-height:100vh;position:relative;overflow-x:hidden;box-shadow:0 0 60px rgba(0,0,0,.7)}
-.panel{background:var(--panel);border:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.panel-2{background:var(--panel-2);border:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.panel{background:var(--panel);border:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.35);border-radius:var(--radius)!important}
+.panel-2{background:var(--panel-2);border:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.3);border-radius:var(--radius)!important}
 .gold-text{color:var(--gold-400)}
-.gold-grad{background:linear-gradient(120deg,var(--gold-500),var(--gold-400))}
-.gold-glow{box-shadow:0 6px 24px rgba(227,169,53,.35), 0 0 0 1px rgba(227,169,53,.25) inset}
-.text-glow{text-shadow:0 0 24px rgba(243,193,92,.45)}
+.gold-grad{background:linear-gradient(120deg,var(--gold-600),var(--gold-light))}
+.gold-glow{box-shadow:0 6px 24px rgba(255,207,71,.3), 0 0 0 1px rgba(223,169,38,.3) inset}
+.text-glow{text-shadow:0 0 24px rgba(255,207,71,.5)}
 .btn-press{transition:transform .15s ease, box-shadow .15s ease}
 .btn-press:active{transform:scale(.97)}
-.ray{position:absolute;background:linear-gradient(90deg, rgba(243,193,92,0), rgba(243,193,92,.5), rgba(243,193,92,0));height:1.5px;filter:blur(.3px)}
+.ray{position:absolute;background:linear-gradient(90deg, rgba(255,207,71,0), rgba(255,207,71,.5), rgba(255,207,71,0));height:1.5px;filter:blur(.3px)}
 .pill{border-radius:999px;font-weight:700;font-size:11px;letter-spacing:.03em;padding:10px 14px;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .field{width:100%;border:1.5px solid var(--border);border-radius:12px;padding:12px 14px;font-size:14px;outline:none;background:var(--panel-2);color:var(--ink-900)}
 .field::placeholder{color:var(--ink-400)}
@@ -145,25 +146,25 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
     </div>
 
     <div class="grid grid-cols-3 gap-2.5">
-      <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:rgba(22,160,138,.08);border:1.5px solid rgba(22,160,138,.45);box-shadow:0 0 18px rgba(22,160,138,.18)">
-        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(22,160,138,.18)"><i class="fa-solid fa-graduation-cap text-base" style="color:var(--teal)"></i></div>
-        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:var(--teal)">Quiero aprender</p>
+      <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:linear-gradient(180deg,#054B50,#032E32);border:1.5px solid #0AB6C4;box-shadow:0 0 18px rgba(6,182,199,.2)">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(6,182,199,.18)"><i class="fa-solid fa-graduation-cap text-base" style="color:#06D7E8"></i></div>
+        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#06D7E8">Quiero aprender</p>
         <p class="text-[8.5px] leading-snug flex-1" style="color:var(--ink-600)">Crea tu Mini App paso a paso.</p>
-        <button onclick="switchTab('cursos')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] text-white flex items-center justify-center gap-1" style="background:var(--teal)">VER CURSOS <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
+        <button onclick="switchTab('cursos')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] text-white flex items-center justify-center gap-1" style="background:#06B6C7">VER CURSOS <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
       </div>
 
-      <div class="rounded-2xl p-3 text-center flex flex-col items-center gold-grad" style="box-shadow:0 0 22px rgba(227,169,53,.35)">
-        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(27,19,5,.18)"><i class="fa-solid fa-eye text-base" style="color:#1b1305"></i></div>
-        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#1b1305">Ver ejemplos</p>
-        <p class="text-[8.5px] leading-snug flex-1" style="color:#3a2c0f">Mini Apps reales de otros negocios.</p>
-        <button onclick="switchTab('demos')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] flex items-center justify-center gap-1" style="background:#1b1305;color:var(--gold-400)">VER DEMOS <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
+      <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:linear-gradient(180deg,#6D4C09,#332406);border:1.5px solid #DFA926;box-shadow:0 0 22px rgba(223,169,38,.28)">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(244,198,61,.18)"><i class="fa-solid fa-eye text-base" style="color:#F4C63D"></i></div>
+        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#DFA926">Ver ejemplos</p>
+        <p class="text-[8.5px] leading-snug flex-1" style="color:var(--ink-600)">Mini Apps reales de otros negocios.</p>
+        <button onclick="switchTab('demos')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] flex items-center justify-center gap-1" style="background:#DFA926;color:#1b1305">VER DEMOS <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
       </div>
 
-      <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:rgba(139,92,246,.08);border:1.5px solid rgba(139,92,246,.45);box-shadow:0 0 18px rgba(139,92,246,.18)">
-        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(139,92,246,.18)"><i class="fa-solid fa-rocket text-base" style="color:var(--purple)"></i></div>
-        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:var(--purple)">Hazla por mí</p>
+      <div class="rounded-2xl p-3 text-center flex flex-col items-center" style="background:linear-gradient(180deg,#351541,#1F1027);border:1.5px solid #9C49D7;box-shadow:0 0 18px rgba(156,73,215,.25)">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center mb-2" style="background:rgba(200,95,255,.18)"><i class="fa-solid fa-rocket text-base" style="color:#C85FFF"></i></div>
+        <p class="font-display font-bold text-[11.5px] leading-tight mb-1" style="color:#C85FFF">Hazla por mí</p>
         <p class="text-[8.5px] leading-snug flex-1" style="color:var(--ink-600)">Nuestro equipo la crea por ti.</p>
-        <button onclick="switchTab('hazlamia')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] text-white flex items-center justify-center gap-1" style="background:var(--purple)">COTIZAR <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
+        <button onclick="switchTab('hazlamia')" class="btn-press w-full mt-2 py-2 rounded-full font-extrabold text-[8.5px] text-white flex items-center justify-center gap-1" style="background:#7C2CB8">COTIZAR <i class="fa-solid fa-chevron-right text-[7px]"></i></button>
       </div>
     </div>
   </section>
@@ -186,7 +187,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
   </section>
 
   <div class="px-5">
-    <button onclick="openWhatsApp('Hola, quiero comenzar mi Mini App.')" class="btn-press w-full py-4 rounded-2xl font-extrabold text-sm text-white flex items-center justify-center gap-2" style="background:linear-gradient(120deg,var(--wa-green),var(--wa-green-dark));box-shadow:0 8px 24px rgba(37,211,102,.35)">
+    <button onclick="openWhatsApp('Hola, quiero comenzar mi Mini App.')" class="btn-press w-full py-4 rounded-2xl font-extrabold text-sm text-white flex items-center justify-center gap-2" style="background:linear-gradient(90deg,#10A93B,#28D653);box-shadow:0 0 35px rgba(24,194,71,.45)">
       <i class="fa-brands fa-whatsapp text-lg"></i> Comienza ahora tu Mini App
     </button>
     <p class="text-center text-[10px] mt-4" style="color:var(--ink-400)">© Aprendiendo &amp; Emprendiendo — Tecnología que impulsa negocios.</p>
@@ -275,7 +276,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
   </div>
 </div>
 
-<button onclick="openWhatsApp('Hola, quiero más información sobre las Mini Apps.')" class="fixed z-40 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg active:scale-95 transition-transform" style="background:#25D366;bottom:86px;right:max(16px, calc(50vw - 199px))" aria-label="Escríbenos por WhatsApp">
+<button onclick="openWhatsApp('Hola, quiero más información sobre las Mini Apps.')" class="fixed z-40 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg active:scale-95 transition-transform" style="background:linear-gradient(135deg,#28D653,#10A93B);box-shadow:0 0 20px rgba(24,194,71,.4);bottom:86px;right:max(16px, calc(50vw - 199px))" aria-label="Escríbenos por WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </button>
 
@@ -297,7 +298,7 @@ const BIZ = {
 
 const PAYMENT_METHODS = [
   {id:'nequi', label:'Nequi', sublabel:'Nequi', icon:'fa-mobile-screen-button', color:'#DA1884', value:'300 000 0000'},
-  {id:'llave', label:'Llave', sublabel:'Llave', icon:'fa-key', color:'#c9962e', value:'aprendiendoyemprendiendo'},
+  {id:'llave', label:'Llave', sublabel:'Llave', icon:'fa-key', color:'#DFA926', value:'aprendiendoyemprendiendo'},
 ];
 
 const CURSOS = [
