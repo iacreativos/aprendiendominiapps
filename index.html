@@ -225,19 +225,19 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
   <section class="px-5 pt-5">
     <div class="flex items-center gap-3 mb-4">
       <div class="hairline flex-1"></div>
-      <h2 class="font-display font-bold text-base text-center">Mini Apps profesionales</h2>
+      <h2 class="font-display font-bold text-base text-center">Mini Apps Curso Básico</h2>
       <div class="hairline flex-1"></div>
     </div>
-    <div id="demos-grid" class="grid grid-cols-2 gap-3"></div>
+    <div id="basicas-grid" class="grid grid-cols-2 gap-3"></div>
   </section>
 
   <section class="px-5 pt-8 pb-8">
     <div class="flex items-center gap-3 mb-4">
       <div class="hairline flex-1"></div>
-      <h2 class="font-display font-bold text-base text-center">Mini Apps Básicas</h2>
+      <h2 class="font-display font-bold text-base text-center">Mini Apps Curso Avanzado</h2>
       <div class="hairline flex-1"></div>
     </div>
-    <div id="basicas-grid" class="grid grid-cols-2 gap-3"></div>
+    <div id="demos-grid" class="grid grid-cols-2 gap-3"></div>
   </section>
 
   <section id="casos-anchor" class="px-5 pb-8 pt-8">
@@ -407,8 +407,8 @@ const AGENDA = {
 };
 
 const PAYMENT_METHODS = [
-  {id:'nequi', label:'Nequi', sublabel:'Nequi', icon:'fa-mobile-screen-button', color:'#DA1884', value:'300 000 0000'},
-  {id:'llave', label:'Llave', sublabel:'Llave', icon:'fa-key', color:'#DFA926', value:'aprendiendoyemprendiendo'},
+  {id:'nequi', label:'Nequi', sublabel:'Nequi', icon:'fa-mobile-screen-button', color:'#DA1884', value:'3022602664'},
+  {id:'llave', label:'Llave', sublabel:'Llave', icon:'fa-key', color:'#DFA926', value:'@3022602664'},
 ];
 
 const CURSOS = [
@@ -440,12 +440,11 @@ const DEMOS = [
   {id:'nails', name:'Nail Studio', cat:'Manicure', icon:'fa-hand-sparkles', color:'#e6499f', photo:'linear-gradient(160deg,#5c1f42,#20081a)', url:'https://yreyecito-source.github.io/manicurista/'},
 ];
 
-// TODO: reemplaza "url" por el enlace real de cada plantilla básica publicada
 const BASICAS = [
-  {id:'nutri1', name:'Dra. Sofía Rodríguez', cat:'Nutricionista', icon:'fa-utensils', color:'#0d9488', url:'#'},
-  {id:'nutri2', name:'Dra. Ana Pérez', cat:'Nutrición Funcional', icon:'fa-leaf', color:'#16a34a', url:'#'},
-  {id:'fiestas', name:'Carolina Carelli', cat:'Decoradora de Fiestas', icon:'fa-champagne-glasses', color:'#ec4899', url:'#'},
-  {id:'pasteleria', name:'Dulce Delicia', cat:'Pastelería Artesanal', icon:'fa-cake-candles', color:'#c2410c', url:'#'},
+  {id:'nutri1', name:'Dra. Sofía Rodríguez', cat:'Nutricionista', icon:'fa-utensils', color:'#0d9488', url:'https://iacreativos.github.io/miniappswhatsapp/nutricionista-sofia/'},
+  {id:'nutri2', name:'Dra. Ana Pérez', cat:'Nutrición Funcional', icon:'fa-leaf', color:'#16a34a', url:'https://iacreativos.github.io/miniappswhatsapp/nutricion-ana/'},
+  {id:'fiestas', name:'Carolina Carelli', cat:'Decoradora de Fiestas', icon:'fa-champagne-glasses', color:'#ec4899', url:'https://iacreativos.github.io/miniappswhatsapp/fiestas-carolina/'},
+  {id:'pasteleria', name:'Dulce Delicia', cat:'Pastelería Artesanal', icon:'fa-cake-candles', color:'#c2410c', url:'https://iacreativos.github.io/miniappswhatsapp/pasteleria-dulce/'},
 ];
 
 const CASOS = [
@@ -458,7 +457,7 @@ const CASOS = [
 const FAQS = [
   {q:'¿Qué incluye el Curso Básico?', a:'Clases en video + 8 plantillas HTML para que publiques tu propia tarjeta digital, sin necesidad de saber programar.'},
   {q:'¿Qué incluye el Curso Avanzado?', a:'Clases en video más avanzadas y plantillas de Mini Apps completas (con agenda, catálogo, carrito, etc.) para negocios.'},
-  {q:'¿Cómo pruebo las Mini Apps de ejemplo?', a:'Toca "Ver Demo" en cualquiera de las tarjetas de la sección Mini Apps profesionales. Se abre la Mini App real, como si fuera una aplicación.'},
+  {q:'¿Cómo pruebo las Mini Apps de ejemplo?', a:'Toca "Ver Demo" en cualquiera de las tarjetas de las secciones Mini Apps Curso Básico o Mini Apps Curso Avanzado. Se abre la Mini App real, como si fuera una aplicación.'},
   {q:'¿Cómo pago?', a:'Aceptamos Nequi y Llave. Eliges el medio, copias el dato, pagas desde tu app y nos envías el comprobante por este mismo WhatsApp.'},
   {q:'¿Si quiero una Mini App a mi medida?', a:'Toca "Hazla", en la barra inferior, llena el formulario y nuestro equipo te cotiza por WhatsApp.'},
 ];
@@ -628,8 +627,9 @@ let currentPayment = { cursoId:null, method:null };
 function openPayment(cursoId){
   currentPayment = { cursoId, method:null };
   const c = CURSOS.find(x=>x.id===cursoId);
+  const displayName = c.id === 'basico' ? `${c.name} + 8 Plantillas` : c.name;
   document.getElementById('payment-summary').innerHTML = `
-    <p><span style="color:var(--ink-400)">Curso:</span> <b>${c.name}</b></p>
+    <p><span style="color:var(--ink-400)">Curso:</span> <b>${displayName}</b></p>
     <p class="mt-1 pt-1 border-t" style="border-color:var(--border)"><span style="color:var(--ink-400)">Valor a pagar:</span> <b class="gold-text">${money(c.price)}</b></p>
   `;
   renderPaymentSection();
@@ -665,7 +665,7 @@ function renderPaymentSection(){
       </div>
       <div class="rounded-xl p-3 text-xs leading-relaxed mt-3" style="background:rgba(227,169,53,.08);color:var(--ink-600)">
         <i class="fa-solid fa-circle-info mr-1" style="color:var(--gold-400)"></i>
-        Copia el dato, realiza el pago desde tu app y envía el <b>comprobante por este mismo chat de WhatsApp</b>. Tienes <b>30 minutos</b> para hacerlo.
+        Copia el dato, realiza el pago desde tu app bancaria y envía el <b>comprobante por este mismo chat de WhatsApp</b>. Una vez hecho el pago, indícanos un email para darte acceso a tu compra.
       </div>
     ` : ''}
     <button onclick="confirmPurchase()" ${chosen?'':'disabled'} class="w-full mt-4 py-3 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 disabled:opacity-40" style="background:var(--wa-green)">
