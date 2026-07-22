@@ -212,6 +212,7 @@ h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif}
         </button>
         <div class="acc-body px-4">
           <p class="text-xs pb-3" style="color:var(--ink-600)">Para darte una cotización justa, primero agendamos una <b style="color:var(--ink-900)">llamada de 20 a 30 minutos</b>. Ahí conocemos las necesidades de tu empresa y te contamos cómo podemos ayudarte a resolverlas con tu propia Mini App.</p>
+          <button onclick="switchTab('demos')" class="w-full mb-3 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5" style="background:rgba(200,95,255,.1);color:#C85FFF;border:1px solid rgba(156,73,215,.35)"><i class="fa-solid fa-eye"></i> Ver Demos</button>
         </div>
       </div>
       <div class="p-4 pt-0">
@@ -417,8 +418,8 @@ const CURSOS = [
     desc:'Clases en video + 8 plantillas HTML listas para personalizar.',
     icon:'fa-graduation-cap', color:'var(--teal)',
     modulos:[
-      {titulo:'Módulo 1 · Inicio y HTML', items:['Cómo publicar gratis tu tarjeta HTML']},
-      {titulo:'Módulo 2 · Plantillas HTML', items:['8 plantillas listas para personalizar']},
+      {titulo:'Módulo 1 · Inicio y HTML', items:['Cómo Crear y Editar Las Plantillas']},
+      {titulo:'Módulo 2 · Plantillas HTML', items:['8 Plantillas Listas Para Personalizar']},
     ]
   },
   {
@@ -547,6 +548,7 @@ function renderCursos(){
                 ${m.items.length ? `<ul class="mt-1 space-y-0.5" style="color:var(--ink-600)">${m.items.map(i=>`<li>• ${i}</li>`).join('')}</ul>` : ''}
               </div>
             `).join('')}
+            <button onclick="switchTab('demos')" class="w-full mt-1 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5" style="background:rgba(227,169,53,.1);color:var(--gold-400);border:1px solid rgba(227,169,53,.3)"><i class="fa-solid fa-eye"></i> Ver Demos</button>
           </div>
         </div>
       </div>
